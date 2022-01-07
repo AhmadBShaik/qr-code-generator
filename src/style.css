@@ -3,25 +3,39 @@
     padding: 0;
 }
 
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(180deg,#0488f1 0,#f005ff 70%);
+    height: 100%;
+}
+
+#separator {
+    display: none;
+}
 
 .card{
     display: flex;
     margin-top: 10px;
     padding: 10px;
-    border:solid blue 2px;
+    border:solid #0488f1 2px;
+    box-shadow: 0 0 2px #0488f1;
 }
 
 .card button{
     margin: 5px;
 }
 .container {
-    padding: 20px;
-    border: 1px solid red;
+    border-radius: 5px;
+    padding: 15px;
+    /* border: 1px solid red; */
     max-width: 800px;
-    margin: 0 auto;
-    /* margin-top: 50px; */
+    margin: 20px auto;
+    background-color: #fff;  
 }
 
+#input_view{
+    padding-top: 0px;
+}
 
 #address_list{
     margin-top: 20px;
@@ -35,15 +49,23 @@
 
     
 #submit_btn, #back_to_home{
+    color: #fff;
+    font-weight: bold;
     width: 100%;
-    padding: 0;
+    padding: 5px;
     margin-top: 10px;
+    background-color: rgb(59, 59, 182);
 }
+
+
 
 #submit_btn{
     display: none;
 }
 
+#back_to_home{
+    /* background-color: #f005ff; */
+}
 #output_view{
     display: none;
 }
@@ -68,3 +90,79 @@
 #output_view .card p{
     margin: 0;
 }
+
+.green-btn{
+    color: #fff;
+    background-color: rgb(28, 179, 28);
+    font-weight: bold;
+}
+
+.green-btn:hover{
+    color: #fff;
+    background-color: rgb(13, 139, 13);
+}
+
+.edit_btn{
+    background-color: rgb(248, 208, 64);
+    color: #fff;
+    font-weight: bold;
+    
+    padding:3px 7px;
+}
+
+.edit_btn:hover{
+    background-color: gold;
+    color: #fff;
+}
+
+.delete_btn{
+    background-color: rgb(247, 60, 60);
+    color: #fff;
+    font-weight: bold;
+    
+    padding:3px 7px;
+}
+
+.delete_btn:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.card-content{
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.back_btn{
+    padding: 2px 5px;
+    margin: 5px;
+    border: 3px green solid;
+    color:green;
+    background-color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.back_btn:hover{
+    color: #fff;
+    background-color: green;
+}
+
+.change_btn{
+    padding: 2px 5px;
+    margin: 5px;
+    border: 3px gold solid;
+    color: gold;
+    background-color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.change_btn:hover{
+    color: #fff;
+    background-color: gold;
+}
+
+/* #output_view .card{
+    border: 2px solid #f005ff;
+    box-shadow: 0 0 2px #f005ff;
+
+} */

@@ -12,16 +12,16 @@ addBtn.addEventListener('click',() => {
     const baseURLMessage = document.getElementById("base_url_message")
     const addressMessage = document.getElementById("address_message")
     
+    const addressInputTag = document.getElementById("address")
     
     const url = URLify(baseURL, address)
-    if(baseURL !=="" && !(baseURL.includes(" ")) && address !== "" && !(completeURLList.includes(url))){
+    if(baseURL !== "" && !(baseURL.includes(" ")) && address !== "" && !(completeURLList.includes(url))){
         
         completeURLList.push(url)
         addressList.push(address)
         addressMessage.innerText = ""
-        const addressInputTag = document.getElementById("address")
         addressInputTag.value = ""
-        addressInputTag.focus()        
+        addressInputTag.focus()    
         
     }else{
         
@@ -35,8 +35,10 @@ addBtn.addEventListener('click',() => {
         
         if(address === ""){
             addressMessage.innerText = "*This field is required"
+
         }else if(completeURLList.includes(url)){
-            addressMessage.innerText = "already exists!"
+            addressMessage.innerText = "Address already exists!"
+            addressInputTag.focus()
         }
         
     }
@@ -47,6 +49,8 @@ function updateUI(){
     const submitBtn = document.getElementById('submit_btn')
     if(addressList.length > 0){
         submitBtn.style.display = "block"
+        document.getElementById("separator").style.display = "block"
+
     }
 
     const rootElement = document.getElementById('address_list')
@@ -59,16 +63,17 @@ function updateUI(){
         const action_btns = document.createElement('div')
         const view_qr_btn_wrapper = document.createElement('div')
         const edit_delete_btn_wrapper = document.createElement('div')
-        const view_qr_btn = document.createElement('div')
-        const edit_btn = document.createElement('div')
-        const delete_btn = document.createElement('div')
+        const view_qr_btn = document.createElement('button')
+        const edit_btn = document.createElement('button')
+        const delete_btn = document.createElement('button')
 
         
         rootElement.appendChild(card)
         card.classList.add('card')
-
+        content.classList.add('card-content')
         
         card.appendChild(content)
+        
         card.appendChild(action_btns)
         action_btns.classList.add('action_btns')
 
@@ -119,8 +124,10 @@ function updateUI(){
             inputMessage.classList.add('edit_input_message')
             backBtn.innerHTML = "back"
             backBtn.classList.add("btn")
+            backBtn.classList.add("back_btn")
             changeBtn.innerHTML = "change"
             changeBtn.classList.add("btn")
+            changeBtn.classList.add("change_btn")
 
             inputTag.classList.add('form-control')
             const contentHTML = content.innerHTML
@@ -152,7 +159,7 @@ function updateUI(){
                 const url = URLify(baseURL, address)
                 
                 if(completeURLList.includes(url) && url !== completeURLList[i] ){
-                    inputMessage.innerText = "already exists!"
+                    inputMessage.innerText = "Address already exists!"
                 }else{
                     addressList[i] = inputTag.value
                     completeURLList[i] = url
