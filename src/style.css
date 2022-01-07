@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.card{
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    border:solid blue 2px;
+}
+
+.card button{
+    margin: 5px;
+}
+.container {
+    padding: 20px;
+    border: 1px solid red;
+    max-width: 800px;
+    margin: 0 auto;
+    /* margin-top: 50px; */
+}
+
+
+#address_list{
+    margin-top: 20px;
+}
+
+.action_btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    
+#submit_btn, #back_to_home{
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#submit_btn{
+    display: none;
+}
+
+#output_view{
+    display: none;
+}
+
+.qr_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: red 5px solid;
+}
+
+.message, .edit_input_message{
+    margin: 5px 0 0 5px;
+    padding: 0;
+    font-size: 1rem;
+    color: red;
+}
+.message{
+    height: 1.6rem;
+}
+
+#output_view .card p{
+    margin: 0;
+}
