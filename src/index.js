@@ -51,6 +51,9 @@ function updateUI(){
         submitBtn.style.display = "block"
         document.getElementById("separator").style.display = "block"
 
+    }else{
+        submitBtn.style.display = "none"
+        document.getElementById("separator").style.display = "none"
     }
 
     const rootElement = document.getElementById('address_list')
@@ -193,9 +196,12 @@ submitBtn.addEventListener('click',() => {
         
         const canvasCard = document.createElement('div')
         const canvasAddress = document.createElement('p')
-        const canvasLink = document.createElement('a')
+        const community = document.createElement('p')
+        
+        const a = completeURLList[i].split('?')[0].split('/').filter(word => word !== "" )
+        console.log(a[a.length-1])
+        community.innerText = a[a.length-1]
 
-        canvasLink.innerText = "Visit Site"
         canvasAddress.innerText = addressList[i]
 
         canvasCard.classList.add('card')
@@ -203,15 +209,13 @@ submitBtn.addEventListener('click',() => {
         const canvas = document.createElement('canvas')
         canvas.style.margin = "auto"
         
-        canvasLink.style.textAlign = "center"
-        canvasLink.classList.add('link')
-        canvasLink.href = completeURLList[i]
-        canvasLink.target="_blank"
+ 
         canvasAddress.style.textAlign = "center"
+        community.style.textAlign = "center"
         
         canvasCard.appendChild(canvas)
+        canvasCard.appendChild(community)
         canvasCard.appendChild(canvasAddress)
-        canvasCard.appendChild(canvasLink)
         
         outputView.children[0].appendChild(canvasCard)
         
