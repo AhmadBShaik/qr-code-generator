@@ -55,6 +55,9 @@ addBtn.addEventListener('click',() => {
         completeURLList.push(url)
         addressList.push(address)
         addressMessage.innerText = ""
+        const addressInputTag = document.getElementById("address")
+        addressInputTag.value = ""
+        addressInputTag.focus()        
         
     }else{
         
