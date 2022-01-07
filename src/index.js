@@ -1,45 +1,9 @@
 const addBtn = document.getElementById("add_btn")
 
 const submitBtn = document.getElementById("submit_btn")
-// const addressListTag = document.getElementById("address_list")
 
 const addressList = []
 const completeURLList = []
-
-/*
-addBtn.addEventListener('click',() => {
-    const baseURL = document.getElementById('base_url').value
-    const address = document.getElementById('address').value
-    const baseURLMessage = document.getElementById("base_url_message")
-    const addressMessage = document.getElementById("address_message")
-    if(baseURL.value === ""){
-        baseURLMessage.innerHTML = "This field is required"
-    }else{
-        baseURLMessage.innerHTML = ""
-    }
-
-    if(address === ""){
-        addressMessage.innerHTML = "This field is required"
-    }else{
-        addressMessage.innerHTML = ""
-    }
-
-    const url = URLify(baseURL, address)
-    // console.log(addressList.includes(url))
-    if(addressList.includes(url)){
-        addressMessage.innerHTML = "This address already exists!"
-    }else{
-        addressMessage.innerHTML = ""
-        addressList.push(url)
-    }
-
-    // console.log(addressList)
-    updateUI()
-})
-*/
-
-
-
 
 addBtn.addEventListener('click',() => {
 
