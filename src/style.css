@@ -50,7 +50,7 @@ body{
 
 
     
-#submit_btn, #back_to_home{
+#submit_btn, #back_to_home, #download_btn{
     color: #fff;
     font-weight: bold;
     width: 100%;
@@ -59,7 +59,9 @@ body{
     background-color: rgb(59, 59, 182);
 }
 
-
+#download_btn{
+    background-color: #f005ff;
+}
 
 #submit_btn{
     display: none;
